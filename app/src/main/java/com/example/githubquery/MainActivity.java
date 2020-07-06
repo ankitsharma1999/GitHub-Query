@@ -1,6 +1,7 @@
 package com.example.githubquery;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ListView reposListView;
     EditText queryInput;
 
+    @SuppressLint("StaticFieldLeak")
     public class GitHubSearcher  extends AsyncTask<String, Void, String> {
         @Override
         protected void onPreExecute() {
